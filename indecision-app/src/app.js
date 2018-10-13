@@ -16,8 +16,15 @@ const render = () => {
 			<p>{app.options.length ? 'Here are your options:' : 'No options'}</p>
 			<button onClick={clearList}>Remove all</button>
 			<ol>
-				<li>Item One</li>
-				<li>Item Two</li>
+				{
+					app.options.map((option) => {
+						return (
+							<li key={option}>{option}</li>
+						);
+					})
+					// shorthand
+					// app.options.map((option) => <li key={option}>{option}</li>)
+				}
 			</ol>
 			<form onSubmit={onFormSubmit}>
 				<input type="text" name="option"/>
