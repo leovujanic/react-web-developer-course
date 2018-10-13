@@ -1,6 +1,6 @@
 const app = {
 	title: 'Indecision App',
-	subTitle: 'What should I do?',
+	subTitle: 'Put your life in the hands of  computer',
 	options: [],
 };
 
@@ -14,6 +14,9 @@ const render = () => {
 			<h1>{app.title}</h1>
 			{app.subTitle && <p>{app.subTitle}</p>}
 			<p>{app.options.length ? 'Here are your options:' : 'No options'}</p>
+			<button
+				disabled={app.options.length === 0}
+				onClick={onMakeDecision}>What should I do?</button>
 			<button onClick={clearList}>Remove all</button>
 			<ol>
 				{
@@ -34,6 +37,13 @@ const render = () => {
 	);
 
 	ReactDOM.render(template, appRoot);
+};
+
+const onMakeDecision = (e) => {
+	const randomNum = Math.floor(Math.random() * app.options.length);
+
+	const option = app.options[randomNum];
+	alert(option);
 };
 
 const clearList = (e) => {
