@@ -1,3 +1,3 @@
-import './utils';
+import React from 'react';
+import ReactDom from 'react-dom';
 
-console.log("It works - app.js");
