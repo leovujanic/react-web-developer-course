@@ -62,34 +62,28 @@ class IndecisionApp extends React.Component {
 	};
 }
 
-class Header extends React.Component {
+const Header = (props) => {
+	return (
+		<div>
+			<h1>{props.title}</h1>
+			<h2>{props.subTitle}</h2>
+		</div>
+	);
+};
 
-	render() {
-		return (
-			<div>
-				<h1>{this.props.title}</h1>
-				<h2>{this.props.subTitle}</h2>
-			</div>
-		);
-	}
-}
 
-class Action extends React.Component {
-
-	render() {
-		return (
-			<div>
-				<button
-					onClick={this.props.handlePick}
-					disabled={!this.props.hasOptions}
-				>
-					What should I do?
-				</button>
-			</div>
-		);
-	}
-}
-
+const Action = (props) => {
+	return (
+		<div>
+			<button
+				onClick={props.handlePick}
+				disabled={!props.hasOptions}
+			>
+				What should I do?
+			</button>
+		</div>
+	);
+};
 
 class Options extends React.Component {
 	render() {
