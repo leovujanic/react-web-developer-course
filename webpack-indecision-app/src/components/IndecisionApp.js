@@ -8,17 +8,9 @@ import Options from './Options';
 
 export default class IndecisionApp extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-		this.handlePick = this.handlePick.bind(this);
-		this.handleAddOption = this.handleAddOption.bind(this);
-		this.handleDeleteOption = this.handleDeleteOption.bind(this);
-
-		this.state = {
-			options: [],
-		};
-	}
+	state = {
+		options: [],
+	};
 
 	componentDidMount() {
 		try {
@@ -46,19 +38,19 @@ export default class IndecisionApp extends React.Component {
 		console.log('Component will unmount');
 	}
 
-	handleDeleteOptions() {
+	handleDeleteOptions = () => {
 		this.setState(() => ({
 			options: [],
 		}));
-	}
+	};
 
-	handlePick() {
+	handlePick = () => {
 		const randomNum = Math.floor(Math.random() * this.state.options.length);
 		const option = this.state.options[randomNum];
 		alert(option);
-	}
+	};
 
-	handleAddOption(option) {
+	handleAddOption = (option) => {
 		if (!option) {
 			return 'Enter valid value to add item';
 		}
@@ -69,15 +61,15 @@ export default class IndecisionApp extends React.Component {
 		this.setState((prevState) => ({
 			options: prevState.options.concat(option)
 		}));
-	}
+	};
 
-	handleDeleteOption(optionToRemove) {
+	handleDeleteOption = (optionToRemove) => {
 		this.setState((prevState) => ({
 			options: prevState.options.filter((option) => {
 				return optionToRemove !== option;
 			}),
 		}));
-	}
+	};
 
 	render() {
 		const subTitle = 'Put your life in the hands of a computer';
