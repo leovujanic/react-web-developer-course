@@ -7,3 +7,7 @@
     - Setup scripts e.g. for live server in `package.json` in section scripts add ` "serve": "live-server public/"`
     - Npm scripts can be run via command `npm run <script name>`
     
+- Webpack setup
+    - Install webpack `npm install webpack`
+    - Webpack [documentation](https://webpack.js.org/concepts/)
+    - 
