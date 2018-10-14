@@ -110,3 +110,4 @@ typings/
 .next
 
 /public/scripts/app.js
+/public/scripts/bundle.js
