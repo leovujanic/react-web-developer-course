@@ -13,4 +13,4 @@
     - Add webpack npm script
     - Add webpack config file - create `webpack.config.js` file in project root directory
     - Configure output path as full path. Use `__dirname` an `path.join()` to achieve that
-    
+    - Configure sourcemaps - `devtool` [documentation](https://webpack.js.org/configuration/devtool/) 
