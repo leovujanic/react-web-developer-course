@@ -11,21 +11,23 @@ import './styles/styles.scss'
 
 const store = configureStore();
 
-const addExpenseOne = store.dispatch(addExpense({
+store.dispatch(addExpense({
 	description: 'Rent',
 	amount: 100,
 	createdAt: 100,
 }));
-
-const addExpenseTwo = store.dispatch(addExpense({
+store.dispatch(addExpense({
 	description: 'Coffe',
 	amount: 300,
 	createdAt: 200,
 }));
 
-// setTimeout(() => {
-// 	store.dispatch(setTextFilter('rent'));
-// }, 2000);
+store.dispatch(addExpense({
+	description: 'Gas',
+	amount: 50,
+	createdAt: 500,
+}));
+
 
 const appRoot = document.getElementById('app');
 
