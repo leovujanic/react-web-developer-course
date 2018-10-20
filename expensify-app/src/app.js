@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import AppRouter from "./routers/AppRouter"
 import configureStore from './store/configureStore';
+import {addExpense} from './actions/expenses'
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
 
 const store = configureStore();
+
+const addExpenseOne = store.dispatch(addExpense({
+	description: 'Rent',
+	amount: 100,
+	createdAt: 100,
+}));
+
+const addExpenseTwo = store.dispatch(addExpense({
+	description: 'Coffe',
+	amount: 300,
+	createdAt: 200,
+}));
 
 const appRoot = document.getElementById('app');
 
