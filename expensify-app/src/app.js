@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import AppRouter from "./routers/AppRouter"
 import configureStore from './store/configureStore';
 import {addExpense} from './actions/expenses'
+import {setTextFilter} from './actions/filters'
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
@@ -21,6 +22,10 @@ const addExpenseTwo = store.dispatch(addExpense({
 	amount: 300,
 	createdAt: 200,
 }));
+
+setTimeout(() => {
+	store.dispatch(setTextFilter('rent'));
+}, 2000);
 
 const appRoot = document.getElementById('app');
 
