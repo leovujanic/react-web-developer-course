@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import AppRouter from "./routers/AppRouter"
 import configureStore from './store/configureStore';
 import 'normalize.css/normalize.css'
@@ -10,7 +11,13 @@ const store = configureStore();
 
 const appRoot = document.getElementById('app');
 
+const jsx = (
+	<Provider store={store}>
+		<AppRouter/>
+	</Provider>
+);
+
 ReactDOM.render(
-	<AppRouter/>,
+	jsx,
 	appRoot
 );
