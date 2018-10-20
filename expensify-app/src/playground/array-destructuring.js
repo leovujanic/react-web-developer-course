@@ -17,3 +17,8 @@ console.log(`You are in ${city}, ${state}`);
 // exclude some elements
 const [, city1, state1] = address;
 console.log(`You are in ${city1}, ${state1}`);
+
+
+// set defaults
+const [, city2 = 'New York'] = [];
+console.log(`You are in ${city2}`);
