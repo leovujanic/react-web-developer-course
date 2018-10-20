@@ -5,8 +5,9 @@ const store = createStore((state = {count: 0}, action) => {
 	console.log('running');
 	switch (action.type) {
 		case 'INCREMENT':
+			const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
 			return {
-				count: state.count + 1,
+				count: state.count + incrementBy,
 			};
 		case 'DECREMET':
 			return {
@@ -27,10 +28,9 @@ const unsubscribe = store.subscribe(() => {
 });
 
 store.dispatch({
-	type: 'INCREMENT'
+	type: 'INCREMENT',
+	incrementBy: 5,
 });
-
-unsubscribe();
 
 store.dispatch({
 	type: 'INCREMENT'
