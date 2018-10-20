@@ -14,3 +14,7 @@
     - Add webpack config file - create `webpack.config.js` file in project root directory
     - Configure output path as full path. Use `__dirname` an `path.join()` to achieve that
     - Configure sourcemaps - `devtool` [documentation](https://webpack.js.org/configuration/devtool/) 
+    
+    
+- Working with REM-s:
+    - set html font-size to 62.5% (16px * 0.625 = 10) - base 10 for rem
