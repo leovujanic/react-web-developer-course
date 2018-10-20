@@ -23,9 +23,9 @@ const addExpenseTwo = store.dispatch(addExpense({
 	createdAt: 200,
 }));
 
-setTimeout(() => {
-	store.dispatch(setTextFilter('rent'));
-}, 2000);
+// setTimeout(() => {
+// 	store.dispatch(setTextFilter('rent'));
+// }, 2000);
 
 const appRoot = document.getElementById('app');
 
