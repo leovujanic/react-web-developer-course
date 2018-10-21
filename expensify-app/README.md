@@ -1,1 +1,4 @@
-# React boilerplate - V1
+# Expensify App
+
+
+- Running npm script with arguments: `npm run test -- --watch`
