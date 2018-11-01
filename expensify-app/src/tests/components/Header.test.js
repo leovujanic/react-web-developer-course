@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../../components/Header';
-import toJosn from 'enzyme-to-json';
 import {shallow} from 'enzyme';
 
 // Old version
@@ -15,5 +14,5 @@ import {shallow} from 'enzyme';
 test('Should render header correctly', () => {
 	const wrapper = shallow(<Header/>);
 
-	expect(toJosn(wrapper)).toMatchSnapshot();
+	expect(wrapper).toMatchSnapshot();
 });
