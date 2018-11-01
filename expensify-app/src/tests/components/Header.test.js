@@ -1,11 +1,18 @@
 import React from 'react';
 import Header from '../../components/Header';
-import ReactShallowRenderer from 'react-test-renderer/shallow'
-import filterReducers from "../../reducers/filters";
-import moment from "moment";
+import {shallow} from 'enzyme';
+
+// Old version
+// import ReactShallowRenderer from 'react-test-renderer/shallow'
+//
+// test('Should render header correctly', () => {
+// 	const renderer = new ReactShallowRenderer();
+// 	renderer.render(<Header/>);
+// 	expect(renderer.getRenderOutput()).toMatchSnapshot();
+// });
 
 test('Should render header correctly', () => {
-	const renderer = new ReactShallowRenderer();
-	renderer.render(<Header/>);
-	expect(renderer.getRenderOutput()).toMatchSnapshot();
+	const wrapper = shallow(<Header/>);
+
+	expect(wrapper.find('h1').length).toBe(1);
 });
