@@ -13,6 +13,5 @@ import {shallow} from 'enzyme';
 
 test('Should render header correctly', () => {
 	const wrapper = shallow(<Header/>);
-
 	expect(wrapper).toMatchSnapshot();
 });
