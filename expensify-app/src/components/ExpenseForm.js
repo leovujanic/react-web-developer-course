@@ -10,7 +10,6 @@ const now = moment();
 export default class ExpenseForm extends React.Component {
 
 	constructor(props) {
-		console.log(props);
 		super(props);
 		this.state = {
 			description: props.expense ? props.expense.description : '',
