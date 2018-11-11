@@ -1,1 +1,1 @@
-# React boilerplate - V1
+# React boilerplate - v1
