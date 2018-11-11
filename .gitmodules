@@ -1,0 +1,3 @@
+[submodule "expensify-app"]
+	path = expensify-app
+	url = https://github.com/leovujanic/expensify-app.git
